@@ -1,0 +1,35 @@
+** NOTE **
+If you like this project, check out http://github.com/rupa/z
+a complete rethink that the author is now using.
+If you are a python person and interested in experimenting with stuff, 
+http://github.com/rupa/j2 is similar to z, uses python to make experimentation 
+somewhat easier (for me at least), but is not really maintained or indented for
+everyday use.
+**********
+
+maintains a jump-list of the directories you actually use
+old directories eventually fall off the list
+inspired by Joel Schaerer's http://wiki.github.com/joelthelion/autojump
+and something similar i had - but i could never get the dir list right.
+
+INSTALL:
+  source into .bashrc under your '[-z "$PS1" ] || return' line
+  cd around for a while
+
+USE:
+  j [--h[elp]] [--l] [--r] [--s] [regex1 ... regexn]
+                      with no args, returns full list (same as j --l)
+    regex1 ... regexn jump to the the weighted directory matching all masks
+    --l               show the list instead of jumping
+    --r               order by recently used instead of most used.
+    --s               shortest matching path
+
+TIPS:
+  Some handy aliases:
+    alias jl='j --l'
+    alias jr='j --r'
+    alias js='j --s'
+
+CREDITS:
+  Joel Schaerer aka joelthelion for autojump
+  Daniel Drucker aka dmd for finding bugs and making me late for lunch
